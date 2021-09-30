@@ -7,6 +7,10 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 allure {
     version = "2.15.0"
     autoconfigure = true
