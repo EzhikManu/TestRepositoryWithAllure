@@ -14,19 +14,21 @@ compileTestJava {
 allure {
     version = "2.15.0"
     autoconfigure = true
+    aspectjweaver = true
     configuration = "testImplementation"
-    aspectjVersion = '1.9.5'
+
     useJUnit5 {
         version = "2.15.0"
     }
 }
 
 dependencies {
-    testImplementation('com.codeborne:selenide:5.24.4',
-            'org.junit.jupiter:junit-jupiter:5.8.0',
+    testImplementation('org.aspectj:aspectjweaver:1.9.7',
+            'com.codeborne:selenide:5.24.4',
+            'org.junit.jupiter:junit-jupiter:5.8.1',
             'io.qameta.allure:allure-selenide:2.15.0')
     testRuntimeOnly('org.slf4j:slf4j-simple:1.7.32',
-            'org.junit.jupiter:junit-jupiter-engine:5.8.0')
+            'org.junit.jupiter:junit-jupiter-engine:5.8.1')
 }
 
 test {
